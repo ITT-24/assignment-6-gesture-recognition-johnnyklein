@@ -33,7 +33,7 @@ AngleRange = math.radians(45.0) / 180  # Convert degrees to radians
 AnglePrecision = math.radians(2.0) / 180  # Convert degrees to radians
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
-xml_filepath = 'xml_logs' # 'xml_logs2' hat kleineren datensatz für aufgabe 1
+xml_filepath = 'xml_logs2' # 'xml_logs2' hat kleineren datensatz für aufgabe 1
 
 def Resamplepoints(points, n):
     I = PathLength(points) / float(n - 1)
@@ -80,6 +80,7 @@ class DollarRecognizer:
                             y = element.get('Y')
                             points.append(Point(float(x), float(y)))
                         self.AddGesture(label, points)
+        print(f'loaded {len(self.Unistrokes)} gestures')
 
     def Recognize(self, points):
         t = time.time()

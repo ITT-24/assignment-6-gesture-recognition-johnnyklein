@@ -36,7 +36,7 @@ WINDOW_HEIGHT = 600
 user_score = 0
 computer_score = 0
 computer_gesture = None
-xml_filepath = 'xml_logs' # 'xml_logs2' hat kleineren datensatz für aufgabe 1
+xml_filepath = 'xml_logs2' # 'xml_logs2' hat kleineren datensatz für aufgabe 1
 
 def Resamplepoints(points, n):
     I = PathLength(points) / float(n - 1)
